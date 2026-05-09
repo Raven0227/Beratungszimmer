@@ -1,12 +1,40 @@
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
-/[Mm]emoryCaptures/
-/[Rr]ecordings/
+# ===================================================
+# UNITY (Standard-Ignores)
+# ===================================================
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+Build_*/
+Builds_*/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# Asset Meta-Dateien fuer Ordner die ignoriert werden
+!/[Aa]ssets/**/*.meta
+
+# Nie committen — Unity erstellt es neu
+/[Aa]ssets/[Aa]ssetStoreTools*
+
+# ===================================================
+# BUILD-OUTPUTS NIE COMMITTEN
+# ===================================================
+*.apk
+*.aab
+*.exe
+*.app
+*.ipa
+*.unitypackage
+Beratungszimmer_Prototyp*.apk
+
+# ===================================================
+# IDE-DATEIEN
+# ===================================================
+# Visual Studio
+.vs/
 *.csproj
 *.unityproj
 *.sln
@@ -21,4 +49,76 @@
 *.mdb
 *.opendb
 *.VC.db
-*.apk
+
+# JetBrains Rider
+.idea/
+*.idea*
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# ===================================================
+# BETRIEBSSYSTEM
+# ===================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+
+# ===================================================
+# SONSTIGES
+# ===================================================
+# Crashlytics
+crashlytics-build.properties
+
+# Backup
+*.bak
+*.backup
+
+# Logs
+*.log
+sysinfo.txt
+
+# Build Output
+ExportedObj/
+.consulo/
+*.svd
+*.pdb.meta
+
+# Docs
+docs/
+*.html.meta
+
+# Sonstige Geheimnisse
+*.env
+.env
+.env.*
+secrets.txt
+api-keys.txt
+api-keys.json
+credentials.json
+
+# ===================================================
+# API-KEYS - MUSS GANZ AM ENDE STEHEN!
+# ===================================================
+# Diese Regeln gewinnen ueber die "!Assets/**/*.meta"-Regel weiter oben.
+# Reihenfolge ist wichtig: spaetere Regeln in .gitignore haben Vorrang.
+**/ApiConfig.asset
+**/ApiConfig.asset.meta
+Assets/Scripts/AI/ApiConfig.asset
+Assets/Scripts/AI/ApiConfig.asset.meta
+Assets/SCRIPTS/AI/ApiConfig.asset
+Assets/SCRIPTS/AI/ApiConfig.asset.meta
